@@ -6,16 +6,15 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane prefHeight="482.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="CONTROLLER_NAME">
+<AnchorPane prefHeight="482.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.complexnumber.ComplexNumberController">
    <children>
-      <TextField layoutX="150.0" layoutY="69.0" prefHeight="26.0" prefWidth="98.0" />
+      <TextField fx:id="firstCnumber" layoutX="150.0" layoutY="69.0" prefHeight="26.0" prefWidth="98.0" />
       <Label layoutX="35.0" layoutY="73.0" text="Enter Real number" />
-      <TextField layoutX="150.0" layoutY="173.0" prefHeight="26.0" prefWidth="98.0" />
+      <TextField fx:id="secondCnumber" layoutX="150.0" layoutY="173.0" prefHeight="26.0" prefWidth="98.0" />
       <Label layoutX="35.0" layoutY="177.0" text="Enter Real number" />
-      <TextField layoutX="428.0" layoutY="69.0" prefHeight="26.0" prefWidth="98.0" />
+      <TextField fx:id="firstInumber" layoutX="428.0" layoutY="69.0" prefHeight="26.0" prefWidth="98.0" />
       <Label layoutX="277.0" layoutY="73.0" prefHeight="18.0" prefWidth="134.0" text="Enter imaginary number" />
-      <TextField layoutX="428.0" layoutY="173.0" prefHeight="26.0" prefWidth="98.0" />
+      <TextField fx:id="secondInumber" layoutX="428.0" layoutY="173.0" prefHeight="26.0" prefWidth="98.0" />
       <Label layoutX="277.0" layoutY="177.0" prefHeight="18.0" prefWidth="134.0" text="Enter imaginary number" />
       <Label layoutX="35.0" layoutY="23.0" prefHeight="31.0" prefWidth="263.0" text="FIRST COMPLEX NUMBER">
          <font>
@@ -27,12 +26,12 @@
             <Font name="System Bold" size="21.0" />
          </font>
       </Label>
-      <Button layoutX="35.0" layoutY="274.0" mnemonicParsing="false" text="ADD">
+      <Button layoutX="35.0" layoutY="274.0" mnemonicParsing="false" onAction="#add" text="ADD">
          <font>
             <Font name="BACK TO SCHOOL PERSONAL USE Regular" size="28.0" />
          </font>
       </Button>
-      <Button layoutX="150.0" layoutY="274.0" mnemonicParsing="false" text="SUBTRACT">
+      <Button layoutX="150.0" layoutY="274.0" mnemonicParsing="false" onAction="#subtract" text="SUBTRACT">
          <font>
             <Font name="BACK TO SCHOOL PERSONAL USE Regular" size="28.0" />
          </font>
@@ -52,7 +51,7 @@
             <Font name="System Bold" size="15.0" />
          </font>
       </Label>
-      <Label layoutX="116.0" layoutY="384.0" prefHeight="50.0" prefWidth="438.0" style="-fx-background-color: yellow;" textAlignment="CENTER">
+      <Label fx:id="result" layoutX="116.0" layoutY="384.0" prefHeight="50.0" prefWidth="438.0" style="-fx-background-color: yellow;" textAlignment="CENTER">
          <font>
             <Font name="System Bold" size="15.0" />
          </font>
